@@ -1,6 +1,7 @@
 package com.tosunapp.mystoreapp.Adaptor;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -26,6 +27,7 @@ public class MyStoreAdaptor extends RecyclerView.Adapter<MyStoreAdaptor.ViewHold
         this.storeList = storeList;
         this.context = context;
     }
+
 
 
     public interface MyClickListener {
@@ -57,6 +59,24 @@ public class MyStoreAdaptor extends RecyclerView.Adapter<MyStoreAdaptor.ViewHold
         String summaryPrice = String.valueOf(store.getProductDetail().getSummaryPrice()) + " TL";
         holder.summaryPrice.setText(summaryPrice);
 
+        switch (store.getProductState()) {
+            case "Yolda":
+
+                holder.ln_productState.setBackgroundColor(Color.parseColor("#66cd00"));
+                holder.productState.setTextColor(Color.parseColor("#66cd00"));
+            break;
+
+            case "Hazırlanıyor":
+                holder.ln_productState.setBackgroundColor(Color.parseColor("#FFA500"));
+                holder.productState.setTextColor(Color.parseColor("#FFA500"));
+            break;
+
+            case "Onay Bekliyor":
+
+                holder.ln_productState.setBackgroundColor(Color.parseColor("#ee2c2c"));
+                holder.productState.setTextColor(Color.parseColor("#ee2c2c"));
+            break;
+        }
 
         if (store.isClicked()) {
             holder.ln_summary.setVisibility(View.VISIBLE);
@@ -90,7 +110,7 @@ public class MyStoreAdaptor extends RecyclerView.Adapter<MyStoreAdaptor.ViewHold
 
         View container;
         TextView date, month, marketName, orderName, productPrice, productState, orderDetail, summaryPrice;
-        LinearLayout ln_summary;
+        LinearLayout ln_summary,ln_productState;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -104,6 +124,7 @@ public class MyStoreAdaptor extends RecyclerView.Adapter<MyStoreAdaptor.ViewHold
             orderDetail = itemView.findViewById(R.id.tv_orderDetail);
             summaryPrice = itemView.findViewById(R.id.tv_summaryPrice);
             ln_summary = itemView.findViewById(R.id.ln_summary);
+            ln_productState = itemView.findViewById(R.id.ln_productState);
             container = itemView;
 
 

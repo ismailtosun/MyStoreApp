@@ -1,5 +1,7 @@
 package com.tosunapp.mystoreapp.Model;
 
+import android.graphics.Color;
+
 import com.google.gson.annotations.SerializedName;
 
 public class Store {
@@ -27,6 +29,7 @@ public class Store {
 
     //for expand storedetail row.
     private boolean isClicked;
+
 
 
     public String getDate() {
