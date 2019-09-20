@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MyStoreApp</string>
+
+    <string name="my_store">MARKETİM</string>
+    <string name="title_login_button">Giriş</string>
+    <string name="prompt_userName">Kullanıcı Adı</string>
+    <string name="prompt_password">Şifre</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">Lütfen kullanıcı adı veya şifrenizi kontrol ediniz.</string>
+    <string name="remember_me">Beni Hatırla</string>
+    <string name="please_wait_message">Lütfen Bekleyiniz..</string>
+    <string name="check_internet_connection_message">Lütfen internet bağlantınızı kontrol ediniz.</string>
+    <string name="error_message">Bir hata oluştu!</string>
+    <string name="log_out">Çıkış Yap</string>
+    <string name="my_orders">Siparişlerim</string>
+    <string name="are_you_sure_to_log_out">Çıkış yapmak istediğine emin misin ?</string>
+    <string name="warning">Dikkat</string>
+    <string name="okey">Tamam</string>
+    <string name="cancel">İptal</string>
+</resources>
